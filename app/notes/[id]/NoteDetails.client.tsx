@@ -4,6 +4,7 @@ import { useQuery } from "@tanstack/react-query";
 import { useParams } from "next/navigation";
 import { fetchNoteById } from "@/lib/api";
 import css from "./NoteDetails.module.css";
+import { useRouter } from "next/router";
 
 export default function NoteDetailsClient() {
   const { id } = useParams<{ id: string }>();
@@ -17,6 +18,8 @@ export default function NoteDetailsClient() {
     refetchOnMount: false,
   });
 
+  const router = useRouter();
+
   if (isLoading) return <p>Loading, please wait...</p>;
   if (error || !note) return <p>Something went wrong.</p>;
 
@@ -29,6 +32,9 @@ export default function NoteDetailsClient() {
         <p className={css.content}>{note.content}</p>
         <p className={css.date}>{note.createdAt}</p>
       </div>
+      <button className={css.backBtn} onClick={() => router.back()}>
+        Back
+      </button>
     </div>
   );
 }

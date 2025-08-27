@@ -13,7 +13,11 @@ import { fetchNotes } from "@/lib/api";
 import { useDebounce } from "use-debounce";
 import type { NoteResponse } from "@/lib/api";
 
-export default function NotesClient() {
+type NotesClientProps = {
+  tag?: string;
+};
+
+export default function NotesClient({ tag }: NotesClientProps) {
   const [query, setQuery] = useState<string>("");
   const [page, setPage] = useState<number>(1);
   const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -29,8 +33,8 @@ export default function NotesClient() {
   };
 
   const { data } = useQuery<NoteResponse>({
-    queryKey: ["notes", debouncedQuery, page],
-    queryFn: () => fetchNotes(page, debouncedQuery),
+    queryKey: ["notes", debouncedQuery, page, tag],
+    queryFn: () => fetchNotes(page, debouncedQuery, tag),
     placeholderData: keepPreviousData,
   });
 
