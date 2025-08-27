@@ -1,4 +1,3 @@
-import css from "./NotesPage.module.css";
 import {
   QueryClient,
   dehydrate,
@@ -18,7 +17,7 @@ export default async function Notes({ params }: Props) {
 
   await queryClient.prefetchQuery({
     queryKey: ["notes", { query: "", page: 1, tag: tag }],
-    queryFn: () => fetchNotes(1, "", tag),
+    queryFn: () => fetchNotes(1, ""),
   });
 
   return (

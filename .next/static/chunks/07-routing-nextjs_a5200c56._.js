@@ -104,12 +104,13 @@ __turbopack_context__.s([
 var __TURBOPACK__imported__module__$5b$project$5d2f$07$2d$routing$2d$nextjs$2f$node_modules$2f$next$2f$dist$2f$build$2f$polyfills$2f$process$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = /*#__PURE__*/ __turbopack_context__.i("[project]/07-routing-nextjs/node_modules/next/dist/build/polyfills/process.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$07$2d$routing$2d$nextjs$2f$node_modules$2f$axios$2f$lib$2f$axios$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/07-routing-nextjs/node_modules/axios/lib/axios.js [app-client] (ecmascript)");
 ;
-const fetchNotes = async (page, query)=>{
+const fetchNotes = async (page, query, tag)=>{
     const response = await __TURBOPACK__imported__module__$5b$project$5d2f$07$2d$routing$2d$nextjs$2f$node_modules$2f$axios$2f$lib$2f$axios$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"].get("https://notehub-public.goit.study/api/notes", {
         params: {
             page: page,
             perPage: 12,
-            search: query
+            search: query,
+            tag: tag
         },
         headers: {
             "Content-Type": "application/json",
@@ -709,7 +710,8 @@ function NotesClient(param) {
         placeholderData: __TURBOPACK__imported__module__$5b$project$5d2f$07$2d$routing$2d$nextjs$2f$node_modules$2f40$tanstack$2f$query$2d$core$2f$build$2f$modern$2f$utils$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["keepPreviousData"]
     });
     const totalPages = (data === null || data === void 0 ? void 0 : data.totalPages) || 0;
-    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$07$2d$routing$2d$nextjs$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$07$2d$routing$2d$nextjs$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Fragment"], {
+    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$07$2d$routing$2d$nextjs$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+        className: __TURBOPACK__imported__module__$5b$project$5d2f$07$2d$routing$2d$nextjs$2f$app$2f$notes$2f$filter$2f5b2e2e2e$slug$5d2f$NotesPage$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].app,
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$07$2d$routing$2d$nextjs$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("header", {
                 className: __TURBOPACK__imported__module__$5b$project$5d2f$07$2d$routing$2d$nextjs$2f$app$2f$notes$2f$filter$2f5b2e2e2e$slug$5d2f$NotesPage$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].toolbar,
@@ -768,7 +770,11 @@ function NotesClient(param) {
                 columnNumber: 23
             }, this)
         ]
-    }, void 0, true);
+    }, void 0, true, {
+        fileName: "[project]/07-routing-nextjs/app/notes/filter/[...slug]/Notes.client.tsx",
+        lineNumber: 44,
+        columnNumber: 5
+    }, this);
 }
 _s(NotesClient, "5X2ZJ9P2dbEkOeGR4+uX9/Px4m4=", false, function() {
     return [

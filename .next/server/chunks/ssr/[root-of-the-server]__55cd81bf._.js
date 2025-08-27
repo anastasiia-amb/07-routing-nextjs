@@ -76,17 +76,18 @@ function TagsMenu() {
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$07$2d$routing$2d$nextjs$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                         className: __TURBOPACK__imported__module__$5b$project$5d2f$07$2d$routing$2d$nextjs$2f$components$2f$TagsMenu$2f$TagsMenu$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].menuItem,
                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$07$2d$routing$2d$nextjs$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$07$2d$routing$2d$nextjs$2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
-                            href: `/notes/filter/All`,
+                            href: "/notes/filter/All",
+                            className: __TURBOPACK__imported__module__$5b$project$5d2f$07$2d$routing$2d$nextjs$2f$components$2f$TagsMenu$2f$TagsMenu$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].menuLink,
                             onClick: ()=>setIsOpen(false),
-                            className: __TURBOPACK__imported__module__$5b$project$5d2f$07$2d$routing$2d$nextjs$2f$components$2f$TagsMenu$2f$TagsMenu$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].menuLink
+                            children: "All"
                         }, void 0, false, {
                             fileName: "[project]/07-routing-nextjs/components/TagsMenu/TagsMenu.tsx",
-                            lineNumber: 21,
+                            lineNumber: 20,
                             columnNumber: 13
                         }, this)
                     }, "All", false, {
                         fileName: "[project]/07-routing-nextjs/components/TagsMenu/TagsMenu.tsx",
-                        lineNumber: 20,
+                        lineNumber: 19,
                         columnNumber: 11
                     }, this),
                     tags.map((tag)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$07$2d$routing$2d$nextjs$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
@@ -98,18 +99,18 @@ function TagsMenu() {
                                 children: typeof tag === "string" ? tag : tag
                             }, void 0, false, {
                                 fileName: "[project]/07-routing-nextjs/components/TagsMenu/TagsMenu.tsx",
-                                lineNumber: 32,
+                                lineNumber: 33,
                                 columnNumber: 15
                             }, this)
                         }, typeof tag === "string" ? tag : tag, false, {
                             fileName: "[project]/07-routing-nextjs/components/TagsMenu/TagsMenu.tsx",
-                            lineNumber: 28,
+                            lineNumber: 29,
                             columnNumber: 13
                         }, this))
                 ]
             }, void 0, true, {
                 fileName: "[project]/07-routing-nextjs/components/TagsMenu/TagsMenu.tsx",
-                lineNumber: 19,
+                lineNumber: 18,
                 columnNumber: 9
             }, this)
         ]

@@ -41,7 +41,7 @@ export default function NotesClient({ tag }: NotesClientProps) {
   const totalPages = data?.totalPages || 0;
 
   return (
-    <>
+    <div className={css.app}>
       <header className={css.toolbar}>
         <SearchBox value={query} onChange={handleChange} />
         {totalPages > 1 && (
@@ -57,6 +57,6 @@ export default function NotesClient({ tag }: NotesClientProps) {
         </Modal>
       )}
       {data?.notes && <NoteList notes={data?.notes} />}
-    </>
+    </div>
   );
 }

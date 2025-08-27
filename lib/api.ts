@@ -14,7 +14,8 @@ export interface CreateNoteParams {
 
 export const fetchNotes = async (
   page: number,
-  query: string
+  query: string,
+  tag?: string
 ): Promise<NoteResponse> => {
   const response = await axios.get<NoteResponse>(
     `https://notehub-public.goit.study/api/notes`,
@@ -23,6 +24,7 @@ export const fetchNotes = async (
         page: page,
         perPage: 12,
         search: query,
+        tag: tag,
       },
       headers: {
         "Content-Type": "application/json",
