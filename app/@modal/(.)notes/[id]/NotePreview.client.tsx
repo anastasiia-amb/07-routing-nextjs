@@ -3,13 +3,13 @@
 import { useQuery } from "@tanstack/react-query";
 import { useParams } from "next/navigation";
 import { fetchNoteById } from "@/lib/api";
-import css from "./NotePrewiew.module.css";
-import { useRouter } from "next/router";
+import css from "./NotePreview.module.css";
+import { useRouter } from "next/navigation";
 import Modal from "@/components/Modal/Modal";
 
-type Props = object;
+type Props = {};
 
-const NotePreviewClient: React.FC<Props> = () => {
+export default function NotePreviewClient({}: Props) {
   const { id } = useParams<{ id: string }>();
   const {
     data: note,
@@ -54,5 +54,4 @@ const NotePreviewClient: React.FC<Props> = () => {
       </div>
     </Modal>
   );
-};
-export default NotePreviewClient;
+}
